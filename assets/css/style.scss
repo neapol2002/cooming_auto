@@ -1,0 +1,426 @@
+/*
+@File: Emilono Template Styles
+
+* This file contains the styling for the actual template, this
+is the file you need to edit to change the look of the
+template.
+
+This files table contents are outlined below>>>>>
+
+*******************************************
+*******************************************
+
+** - Default CSS
+*/
+
+/*================================================
+Default CSS
+=================================================*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+
+$main-font-family: 'Roboto', sans-serif;
+$optional-font-family: 'Raleway', sans-serif;
+$main-color: #00299b;
+$black-color: #000000;
+$white-color: #ffffff;
+$transition: .5s;
+
+body {
+    padding: 0;
+    margin: 0;
+    font: {
+        family: $main-font-family;
+    }
+}
+a {
+    text-decoration: none;
+    transition: $transition;
+
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+}
+p {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.d-table {
+    width: 100%;
+    height: 100%;
+
+    &-cell {
+        vertical-align: middle;
+    }
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: $black-color;
+}
+img {
+    max-width: 100%;
+}
+
+/*================================================
+Preloader CSS
+=================================================*/
+.preloader {
+    position: fixed;
+    left: 0;
+    width: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    z-index: 9999999;
+    background-color: $main-color;
+
+    .car-loader {
+        position: absolute;
+        width: 117px;
+        height: 42px;
+        left: 0;
+        top: 45%;
+        right: 0;
+        margin: 0 auto;
+        transform: translateY(-50%);
+
+        .strike {
+            position: absolute;
+            width: 11px;
+            height: 1px;
+            background: $white-color;
+            animation: strikes 0.2s linear infinite;
+        }
+        .strike2 {
+            top: 11px;
+            animation-delay: 0.05s;
+        }
+        .strike3 {
+            top: 22px;
+            animation-delay: 0.1s;
+        }
+        .strike4 {
+            top: 33px;
+            animation-delay: 0.15s;
+        }
+        .strike5 {
+            top: 44px;
+            animation-delay: 0.2s;
+        }
+        .car-detail {
+            position: absolute;
+            display: block;
+            background: $white-color;
+            animation: speed 0.5s linear infinite;
+
+            &.spoiler {
+                width: 0;
+                height: 0;
+                top: 7px;
+                background: none;
+                border: 20px solid transparent;
+                border-bottom: 8px solid $white-color;
+                border-left: 20px solid $white-color;
+            }
+            &.back {
+                height: 20px;
+                width: 92px;
+                top: 15px;
+                left: 0px;
+            }
+            &.center {
+                height: 35px;
+                width: 75px;
+                left: 12px;
+                border-top-left-radius: 30px;
+                border-top-right-radius: 45px 40px;
+                border: 4px solid $white-color;
+                background: none;
+                box-sizing: border-box;
+            }
+            &.center1 {
+                height: 35px;
+                width: 35px;
+                left: 12px;
+                border-top-left-radius: 30px;
+            }
+            &.front {
+                height: 20px;
+                width: 50px;
+                top: 15px;
+                left: 67px;
+                border-top-right-radius: 50px 40px;
+                border-bottom-right-radius: 10px;
+            }
+            &.wheel {
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                top: 20px;
+                left: 12px;
+                border: 3px solid $black-color;
+                background: linear-gradient(45deg, transparent 45%, $white-color 46%, $white-color 54%, transparent 55%), linear-gradient(-45deg, transparent 45%, $white-color 46%, $white-color 54%, transparent 55%), linear-gradient(90deg, transparent 45%, $white-color 46%, $white-color 54%, transparent 55%), linear-gradient(0deg, transparent 45%, $white-color 46%, $white-color 54%, transparent 55%), radial-gradient($white-color 29%, transparent 30%, transparent 50%, $white-color 51%), $black-color;
+                animation-name: spin;
+            }
+            &.wheel2 {
+                left: 82px;
+            }
+        }
+    }
+}
+@keyframes spin {
+    0% {
+        transform: translate(2px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -3px) rotate(36deg);
+    }
+    20% {
+        transform: translate(-2px, 0px) rotate(72deg);
+    }
+    30% {
+        transform: translate(1px, 2px) rotate(108deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(144deg);
+    }
+    50% {
+        transform: translate(-1px, 3px) rotate(180deg);
+    }
+    60% {
+        transform: translate(-1px, 1px) rotate(216deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(252deg);
+    }
+    80% {
+        transform: translate(-2px, -1px) rotate(288deg);
+    }
+    90% {
+        transform: translate(2px, 1px) rotate(324deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(360deg);
+    }
+}
+@keyframes speed {
+    0% {
+        transform: translate(2px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -3px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-2px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 3px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-1px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-2px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(2px, 1px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+@keyframes strikes {
+    from {
+        left: 25px;
+    }
+    to {
+        left: -80px;
+        opacity: 0;
+    }
+}
+
+/*================================================
+Coming Soon Area CSS
+=================================================*/
+.coming-soon-area {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    height: 100vh;
+    background: {
+        image: url(../../assets/img/coming-soon-bg.jpg);
+        position: center center;
+        size: cover;
+        repeat: no-repeat;
+    }
+}
+.coming-soon-content {
+    text-align: center;
+    max-width: 570px;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    .logo {
+        margin-bottom: 30px;
+
+        a {
+            display: inline-block;
+        }
+    }
+    h1 {
+        color: $white-color;
+        text-transform: uppercase;
+        line-height: 1.3;
+        font: {
+            size: 40px;
+            family: $optional-font-family;
+            weight: 300;
+        }
+        span {
+            font-weight: 700;
+        }
+    }
+    p {
+        color: #c7c3c7;
+        font-size: 14px;
+        line-height: 1.8;
+        margin: {
+            top: 13px;
+            bottom: 0;
+            left: auto;
+            right: auto;
+        }
+    }
+    form {
+        position: relative;
+        max-width: 480px;
+        margin: {
+            left: auto;
+            top: 35px;
+            right: auto;
+        }
+        input[type="text"], input[type="email"] {
+            display: block;
+            width: 100%;
+            height: 55px;
+            background-color: transparent;
+            font-size: 15px;
+            color: $white-color;
+            border: 1px solid #eeeeee;
+            outline: 0;
+            transition: $transition;
+            padding-left: 15px;
+
+            &::placeholder {
+                color: #eeeeee;
+            }
+        }
+        button {
+            outline: 0;
+            transition: $transition;
+            background-color: $main-color;
+            color: $white-color;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 55px;
+            line-height: 55px;
+            text-transform: uppercase;
+            padding: 0 25px;
+            border: 1px solid #eeeeee;
+            font: {
+                size: 14px;
+                weight: 600;
+                family: $optional-font-family;
+            }
+            &:hover {
+                color: $main-color;
+                background-color: $white-color;
+                font-weight: 700;
+            }
+        }
+        #validator-newsletter {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -32px;
+            color: $white-color;
+            font-size: 14px;
+        }
+    }
+    .social {
+        margin-top: 40px;
+
+        ul {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+                margin: 0 2px;
+
+                a {
+                    width: 35px;
+                    height: 35px;
+                    line-height: 37px;
+                    display: block;
+                    border-radius: 50%;
+                    background-color: #dddddd;
+                    color: $black-color;
+                    font-size: 14px;
+
+                    &.twitter {
+                        background-color: #1da1f2;
+                        color: $white-color;
+                    }
+                    &.youtube {
+                        background-color: #ff0000;
+                        color: $white-color;
+                    }
+                    &.facebook {
+                        background-color: #3b5998;
+                        color: $white-color;
+                    }
+                    &.linkedin {
+                        background-color: #0077b5;
+                        color: $white-color;
+                    }
+                    &.instagram {
+                        background-color: #c13584;
+                        color: $white-color;
+                    }
+                    &:hover {
+                        background-color: $main-color;
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+    .copyright-text {
+        margin-top: 25px;
+
+        p {
+            color: #c7c3c7;
+            font-size: 14px;
+            max-width: 100%;
+            line-height: initial;
+            margin: {
+                bottom: 0;
+                top: 0;
+            }
+        }
+    }
+}

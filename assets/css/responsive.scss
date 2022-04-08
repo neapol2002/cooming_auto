@@ -1,0 +1,93 @@
+$media: screen;
+$feature_min: min-width;
+$feature_max: max-width;
+$value_one: 576px;
+$value_two: 667px;
+$value_three: 767px;
+$value_four: 768px;
+$value_five: 991px;
+$value_six: 992px;
+$value_seven: 1199px;
+
+$main-color: #00299b;
+$black-color: #000000;
+$white-color: #ffffff;
+
+@media only #{$media} and ($feature_max : $value_three) {
+    
+    .coming-soon-content {
+        max-width: 100%;
+
+        h1 {
+            line-height: 1.4;
+            font-size: 28px;
+        }
+        p {
+            font-size: 13px;
+            margin-top: 10px;
+        }
+        form {
+            max-width: 100%;
+            margin-top: 30px;
+
+            input[type="text"], input[type="email"] {
+                font-size: 14px;
+            }
+            button {
+                position: relative;
+                height: auto;
+                line-height: initial;
+                padding: 16px 30px;
+                font-size: 14px;
+                border: none;
+                margin-top: 15px;
+            }
+        }
+    }
+
+}
+
+@media only #{$media} and ($feature_min : $value_two) and ($feature_max : $value_three) {
+
+    .coming-soon-area {
+        height: 100%;
+        padding: {
+            top: 120px;
+            bottom: 120px;
+        }
+    }
+
+}
+
+@media only #{$media} and ($feature_min : $value_one) and ($feature_max : $value_three) {
+
+    .coming-soon-content {
+        h1 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 14px;
+            color: $white-color;
+        }
+        form {
+            button {
+                position: absolute;
+                height: 55px;
+                line-height: 55px;
+                padding: 0 30px;
+                font-size: 14px;
+                border: 1px solid #eeeeee;
+                margin-top: 0;
+            }
+        }
+    }
+
+}
+
+@media only #{$media} and ($feature_min : $value_four) and ($feature_max : $value_five) {
+
+}
+
+@media only #{$media} and ($feature_min : $value_six) and ($feature_max : $value_seven) {
+    
+}

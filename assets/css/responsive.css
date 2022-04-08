@@ -1,0 +1,57 @@
+@media only screen and (max-width: 767px) {
+  .coming-soon-content {
+    max-width: 100%;
+  }
+  .coming-soon-content h1 {
+    line-height: 1.4;
+    font-size: 28px;
+  }
+  .coming-soon-content p {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  .coming-soon-content form {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+  .coming-soon-content form input[type="text"], .coming-soon-content form input[type="email"] {
+    font-size: 14px;
+  }
+  .coming-soon-content form button {
+    position: relative;
+    height: auto;
+    line-height: initial;
+    padding: 16px 30px;
+    font-size: 14px;
+    border: none;
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (min-width: 667px) and (max-width: 767px) {
+  .coming-soon-area {
+    height: 100%;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .coming-soon-content h1 {
+    font-size: 30px;
+  }
+  .coming-soon-content p {
+    font-size: 14px;
+    color: #ffffff;
+  }
+  .coming-soon-content form button {
+    position: absolute;
+    height: 55px;
+    line-height: 55px;
+    padding: 0 30px;
+    font-size: 14px;
+    border: 1px solid #eeeeee;
+    margin-top: 0;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
